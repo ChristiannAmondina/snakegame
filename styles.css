@@ -1,0 +1,141 @@
+/* styles.css */
+body {
+    /*background-color: rgb(25, 91, 69);*/
+    background: url(./background/bg3.gif);
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;  /* Centers the canvas horizontally */
+    align-items: center;      /* Centers the canvas vertically */
+    height: 100vh;            /* Makes the body take the full height of the viewport */
+    margin: 0;                /* Removes default body margin */
+}
+
+canvas {
+   
+    background-image: url(/background/bg4.gif);
+    
+    background-size: contain;
+    filter: contrast(1.5);
+    display: block;
+    width: 38%;               /* Set the width to 40% of the parent (body) */
+    height: auto;             /* Maintain aspect ratio */
+    border: 1vw solid rgb(128, 0, 128); /* Dark purple border */
+    border-style: groove;
+    box-shadow: 0 0 10px rgba(128, 0, 128, 0.8), 0 0 20px rgba(0, 0, 255, 0.6), 0 0 30px rgba(255, 105, 180, 0.5); /* Neon glow with purple, blue, and light pink */
+    animation: neonPulse 1.5s ease-in-out infinite; /* Apply the animation */
+ 
+}
+
+/* Define the keyframes for the neon pulse effect */
+@keyframes neonPulse {
+    0% {
+        box-shadow: 0 0 10px rgba(176, 134, 253, 0.8), 0 0 10px rgba(0, 0, 255, 0.6), 0 0 30px rgba(255, 105, 180, 0.5);
+        border-color: rgb(255, 52, 255); /* Dark purple border */
+  
+    }
+    50% {
+        box-shadow: 0 0 10px rgb(128, 1, 226), 0 0 30px rgba(145, 49, 255, 0.9), 0 0 90px rgba(255, 105, 180, 0.7);
+        border-color: rgb(110, 192, 255); /* Dark purple border gets brighter */
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 115, 187, 0.8), 0 0 10px rgba(0, 0, 255, 0.6), 0 0 30px rgba(255, 105, 180, 0.5);
+        border-color: rgb(172, 92, 238); /* Back to the initial border color */
+    }
+}
+
+.note1{
+    position: absolute;
+ 
+    left: 6.3%;
+    top: 12%;
+  
+    
+}
+.note1 img{
+    width: 26%;
+    transform: translateX(390%);
+    
+    border-style: groove;
+    border: 0.3vw solid rgb(128, 0, 128); /* Dark purple border */
+    border-style: groove;
+    animation: neonPulsey 0.4s ease-in-out infinite; /* Apply the animation */
+    /*animation: neonPulse 0.4s ease-in-out infinite; /* Apply the animation */
+}
+.img1{
+    position: absolute;
+ 
+    left: -6%;
+    bottom: 10%;
+    animation: neonPulsey 1s ease-in-out infinite; /* Apply the animation */
+    
+    
+
+}
+.img1 img{
+    
+    width: 38%;
+    transform: translateX(390%);
+    border: 0.5vw solid rgb(128, 0, 128); /* Dark purple border */
+    border-style: groove;
+    animation: neonPulsey 1s ease-in-out infinite; /* Apply the animation */
+   
+    /*animation: neonPulse 0.4s ease-in-out infinite; /* Apply the animation */
+}
+
+@keyframes neonPulsey {
+    0% {
+ 
+        border-color: rgb(255, 52, 255); /* Dark purple border */
+  
+    }
+    50% {
+        
+        border-color: rgb(110, 192, 255); /* Dark purple border gets brighter */
+    }
+    100% {
+       
+        border-color: rgb(172, 92, 238); /* Back to the initial border color */
+    }
+}
+
+#scoreContainer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    border: 0.5vw solid rgb(128, 0, 128); /* Dark purple border */
+    border-style: groove;
+    animation: neonPulsey 1s ease-in-out infinite; /* Apply the animation */
+}
+
+@keyframes neonPulsey {
+    0% {
+        border-color: rgb(255, 52, 255); /* Dark purple border */
+    }
+    50% {
+        border-color: rgb(110, 192, 255); /* Dark purple border gets brighter */
+    }
+    100% {
+        border-color: rgb(172, 92, 238); /* Back to the initial border color */
+    }
+}
+
+#scoreDisplay {
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    color: white; /* Set the score text color to white */
+}
+
+.youtube-music iframe {
+    position: absolute;
+    width: 25%;
+    max-width: 660px; /* Maximum width of the player */
+    height: 29%;
+    border: 0.5vw solid rgb(128, 0, 128); /* Dark purple border */
+    border-style: groove;
+    animation: neonPulsey 0.8s infinite; /* Apply the animation */
+    left: 3%;
+    top: 11%;
+    pointer-events: none;
+}
